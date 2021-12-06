@@ -1,0 +1,21 @@
+; Include forcefield parameters
+#include "./gromos54a7_atb.ff/forcefield.itp"
+
+; Include chain topologies
+#include "GO.itp"
+
+; GO position restraints
+#ifdef POSRES
+#include "posre_p305.itp"
+
+; Include water topology
+#include "./gromos54a7_atb.ff/spce.itp"
+
+[ system ]
+; Name
+One molecules in water
+
+[ molecules ]
+; Compound        #mols
+P3O5                1
+SOL              2083
